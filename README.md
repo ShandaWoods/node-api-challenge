@@ -38,15 +38,30 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
-- [ ] Mention two parts of Express that you learned about this week.
+- [ x] Mention two parts of Express that you learned about this week.
 
-- [ ] Describe Middleware?
+I learned that Express is a framework of node, I also learned that it makes it easier to develop applications! We learned routing and middleware with Express. 
 
-- [ ] Describe a Resource?
+- [ x] Describe Middleware?
 
-- [ ] What can the API return to help clients know if a request was successful?
+Middleware functions are functions that have access to (req, res) and they can:
+Execute any code.
+Make changes to the request and the response objects.
+End the request-response cycle.
+Call the next middleware in the stack.
 
-- [ ] How can we partition our application into sub-applications?
+- [ x] Describe a Resource?
+
+The app.resource() method returns a new Resource object, which can be used to further map pathnames and can carry out other actions like create, update, destroy, etc..
+
+
+- [ x] What can the API return to help clients know if a request was successful?
+
+API error return can send back HTTP status codes to communicate the results of a clients request. 
+
+- [ x] How can we partition our application into sub-applications?
+
+By defining and building out routes.
 
 ## Minimum Viable Product
 
