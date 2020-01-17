@@ -4,7 +4,7 @@ const Projects = require('./projectModel.js');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    Action.find(re.query)
+    Action.get(req.query)
     .then(actions => {
 res.status(200).json(actions);
     })
@@ -17,7 +17,7 @@ res.status(200).json(actions);
 });
 
 router.get('/:id', (req, res)=> {
-    Action.findById(req.params.id)
+    Action.get(req.params.id)
     .then(project => {
         if (project) {
             res.status(200).json(project);
@@ -34,7 +34,7 @@ router.get('/:id', (req, res)=> {
 });
 
 router.post('/', (req, res) => {
-    Action.add(req.body)
+    Action.insert(req.body)
     .then(project => {
         res.status(201).json(project)
     })
@@ -104,7 +104,7 @@ router.post('/:id/projects', (req, res) => {
 
 Projects.add(projectInfo)
 .then(project => {
-    res.status(210).json(message);
+    res.status(210).json(project);
 })
 .catch(error => {
     console.log(error);
