@@ -1,4 +1,6 @@
 /*
+VERY FUNNY LUIS!!!! 
+
 play this: https://www.youtube.com/watch?v=d-diB65scQU
 
 Sing along:
@@ -12,3 +14,8 @@ I need this code, but don't know where, perhaps should make some middleware, don
 
 Go code!
 */
+const server = require('./server.js');
+
+server.listen(4000, () => {
+  console.log('\n* Server Running on http://localhost:4000 *\n');
+});
